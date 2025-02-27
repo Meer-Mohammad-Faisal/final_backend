@@ -4,3 +4,7 @@ const app = express();
 app.listen(3000, () => {
     console.log("sevrer start listning on port 3000");
 });
+
+app.get('/', (req, res) => {
+    res.send("Hello ji");
+})
