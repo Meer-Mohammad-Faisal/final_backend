@@ -26,7 +26,7 @@ exports.signup = async (req, res) => {
             });
         }
 
-        // secure password
+        // secure password(password hashing)
         let hashedPassword;
         try {
             hashedPassword = await bcrypt.hash(password, 10);
