@@ -31,11 +31,7 @@ exports.localFileUpload = async (req,res) => {
 }
 
 
-
-
-
-
-
+// cloudinary ka setup
 
 async function uploadFileTOCloudinary(file,folder) {
     const options = {folder};
@@ -47,7 +43,6 @@ async function uploadFileTOCloudinary(file,folder) {
 
     options.resource_type = "auto";
     return await cloudinary.uploader.upload(file.tempFilePath, options);
-   
 }
 
 // image upload ka handler
@@ -221,3 +216,7 @@ exports.imageSizeReduce = async (req,res) => {
         })
     }
 }
+
+
+
+

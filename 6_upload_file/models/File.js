@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-
+// import nodemialer
+const nodemailer = require("nodemailer");
 const fileSchema = new mongoose.Schema({
     name: {
         type:String,
@@ -16,5 +17,22 @@ const fileSchema = new mongoose.Schema({
     }
 })
 
+
+
+// post middleware
+fileSchema.post("save", async function(doc){
+    try{
+        console.log("DOC->", doc);
+
+
+
+    } catch(error) {
+        console.error(error);
+        
+    }
+
+})
+
+
 const File = mongoose.model("File", fileSchema);
-module.exports = File;
+module.exports = File
