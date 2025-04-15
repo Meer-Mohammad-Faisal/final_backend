@@ -41,7 +41,7 @@ exports.resetPasswordToken = async (req, res) => {
      await mailSender(
          email,
          "password reset Ling",
-        ` password reset link is here: ${url}`
+         `password reset link is here: ${url}`
      )
  
  
